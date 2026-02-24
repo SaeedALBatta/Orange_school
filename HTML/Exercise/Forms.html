@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+            <!-- Exercise 4.1 -->
+    <h2>User Registration Form</h2>
+    <form>
+        <label>Name: </label>
+        <input type="text" placeholder="Enter Your Name:">
+        <br>
+        <label>email</label>
+        <input type="email" required>
+        <br>
+        <label>Password</label>
+        <input type="password" required>
+        <br>
+        <label>Date Of Birth</label>
+        <input type="date" required>
+        <br>
+        <label>Profile Picture Upload</label>
+        <input type="file">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Exercise 4.2 -->
+    <form>
+            <h2>User Preferences</h2>
+            <label>About Me</label><br>
+            <textarea rows="4" cols="40" placeholder="write Message Here"></textarea><br>
+            <br>
+            <label>Choose Country:</label>
+            <select>
+                <option value="jo">Jordan</option>
+                <option value="usa">USA</option>
+                <option value="UK">United Kingdom</option>
+            </select><br><br>
+            <fieldset>
+                <legend>Contact Preference</legend>
+                <input type="radio" name="contact" value="email">Email
+                <input type="radio" name="contact" value="Phone">Phone
+            </fieldset>
+            <br><br><br>
+    </form>
+            <!-- Exercise 4.3 -->
+    <form action="https://example.com/submit" method="post" target="_blank" autocomplete="off">
+        <label>Email : </label>
+        <input type="email" required>
+        <input type="submit" value="Submit">
+    </form><br><br><br>
+            <!-- Exercise 4.4 -->
+    <h2>Survey Form</h2>
+    <form>
+        <label>UserName</label>
+        <input type="text" maxlength="10" required><br><br>
+        <label>Age:</label>
+        <input type="number" min="18" max="60"><br><br>
+        <label>Favorite Language:</label>
+        <input type="text" list="langs">
+        <datalist id="langs">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScrpt">
+            <option value="Python">
+        </datalist>
+    </form>
+</body>
+</html>
