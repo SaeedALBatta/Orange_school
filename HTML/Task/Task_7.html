@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tables</title>
 </head>
 <body>
     <header>
@@ -80,29 +80,32 @@
             </tbody>
         </table>
     </section>
+        <br><br><hr><br>
     <section>
-        <h2>Language and Frameworks</h2>
-        <table border="2" cellpadding="10">
-            <tr>
-                <th colspan="2">Language and Frameworks</th>
-            </tr>
-            <tr>
-                <td>Python</td>
-                <td>Django</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Javascript</td>
-                <td>React.js</td>
-            </tr>
-            <tr>
-                <td>Vue.js</td>
-            </tr>
-            <tr>
-                <td>Ruby</td>
-                <td>Ruby on Rails</td>
-            </tr>
+        <table border="1" cellpadding="5">
+            <thead>
+                <th colspan="2">Language and Framworks</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                    <td>Django</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">JavaScript</td>
+                    <td>React.js</td>
+                </tr>
+                <tr>
+                    <td>Vue.js</td>
+                </tr>
+                <tr>
+                    <td>Ruby</td>
+                    <td>Ruby on Rails</td>
+                </tr>
+            </tbody>
         </table>
     </section>
+        <br><br><hr><br>
     <section>
         <h3>Table Num. 2</h3>
         <table border="2" cellpadding="8">
@@ -113,86 +116,84 @@
                 <td>Row 1, Col 4</td>
             </tr>
             <tr>
-                <td colspan="2">Row 2-3, Col 2-3</td>
+                <td colspan="2" rowspan="2">Row 2-3, Col 2-3</td>
                 <td>Row 2, Col 4</td>
             </tr>
             <tr>
                 <td>Row 3, Col 1</td>
-                <td colspan="2"></td>
                 <td>Row 3, Col 4</td>
             </tr>
             <tr>
                 <td>Row 4, Col 1</td>
                 <td>Row 4, Col 2</td>
-                <td colspan="2">Row 4, Col 3-4</td>
+                <td colspan="2"">Row 4, Col 3-4</td>
             </tr>
         </table>
     </section>
+    <br><br><hr><br>
     <section>
-        <h2>TIME TABLE</h2>
-        <table border="2" cellpadding="6">
+        <h3>TABLE USING COLSPAN , ROWSPAN</h3>
+        <table border="2" cellpadding="8" style="text-align: center;" width="600">
             <tr>
-                <th>Day/Period</th>
-                <th>I<br>9:30-10:20</th>
-                <th>II<br>10:20-11:10</th>
-                <th>III<br>11:10-12:00</th>
-                <th>12:00-12:40</th>
-                <th>IV<br>12:40-1:30</th>
-                <th>V<br>1:30-2:20</th>
-                <th>VI<br>2:20-3:10</th>
-                <th>VII<br>3:10-4:00</th>
+                <td rowspan="9">A</td>
+                <td rowspan="8">B</td>
+                <td rowspan="7">C</td>
+                <td rowspan="6">D</td>
+                <td rowspan="5">E</td>
+                <td rowspan="4">F</td>
+                <td colspan="2">AH</td>
+                <td rowspan="4">H</td>
+                <td rowspan="5">I</td>
+                <td rowspan="6">J</td>
+                <td rowspan="7">K</td>
+                <td rowspan="8">L</td>
+                <td rowspan="10">M</td>
             </tr>
             <tr>
-                <th>Monday</th>
-                <td>Eng</td>
-                <td>Mat</td>
-                <td>Che</td>
-                <th rowspan="6">LUNCH</th>
-                <td colspan="3">LAB</td>
-                <td>Phy</td>
+                <td colspan="2">G</td>
             </tr>
             <tr>
-                <th>Tuesday</th>
-                <td colspan="3">LAB</td>
-                <td>Eng</td>
-                <td>Che</td>
-                <td>Mat</td>
-                <td>SPORTS</td>
+                <td colspan="2">GH</td>
             </tr>
             <tr>
-                <th>Wednesday</th>
-                <td>Mat</td>
-                <td>Phy</td>
-                <td>Eng</td>
-                <td colspan="3">LIBRARY</td>
-                <td></td>
+                <td colspan="2">N</td>
             </tr>
             <tr>
-                <th>Thursday</th>
-                <td>Phy</td>
-                <td>Eng</td>
-                <td>Che</td>
-                <td colspan="3">LAB</td>
-                <td>Mat</td>
+                <td colspan="4">O</td>
             </tr>
             <tr>
-                <th>Friday</th>
-                <td colspan="3">LAB</td>
-                <td>Mat</td>
-                <td>Che</td>
-                <td>Eng</td>
-                <td>Phy</td>
+                <td colspan="6">P</td>
             </tr>
-        
             <tr>
-                <th>Saturday</th>
-                <td>Eng</td>
-                <td>Che</td>
-                <td>Mat</td>
-                <td colspan="3">SEMINAR</td>
-                <td>SPORTS</td>
+                <td colspan="8">Q</td>
+            </tr>
+            <tr>
+                <td colspan="2">R</td>
+                <td>S</td>
+                <td>T</td>
+                <td colspan="2">U</td>
+                <td>V</td>
+                <td>W</td>
+                <td colspan="2">X</td>
+            </tr>
+            <tr>
+                <td colspan="12">Y</td>
+            </tr>
+            <tr>
+                <td colspan="2">Z</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td colspan="2">5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
             </tr>
         </table>
     </section>
+    <br><br><hr><br>
 </body>
 </html>
