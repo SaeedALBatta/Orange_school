@@ -1,0 +1,36 @@
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(250, 254, 127);
+        }
+        .card{
+            width: 800px;
+            background-color: rgb(249, 251, 251);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .Orange-back {
+            background-color: orange;
+            padding: 3px;
+        }
+        .Yellow {
+            background-color: yellow;
+            padding: 3px;
+        }
+        .card-1{
+            color: red;
+            width: 800px;
+            background-color: rgb(249, 251, 251);
+            margin: 10px;
+            padding: 10px;
+            border: 1px dotted black;
+        }
+        .card-1 div {
+            border: 2px dotted black;
+
+            
+        }

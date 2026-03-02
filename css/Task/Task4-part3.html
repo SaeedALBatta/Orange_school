@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            background-color: #008ff5;
+            width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            margin: 30px;
+        }
+        .card h1 {
+            color: white;
+        }
+        .card input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .card button {
+            width: 50px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color:#00108d;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Contact Us</h1>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="ُEmail">
+        <input type="tel" placeholder="ُtel: XXX XXX XXXX">
+        <textarea placeholder="Your Message Hres ..." cols="30" rows="10"></textarea>
+        <button>Send</button>
+    </div>
+</body>
+</html>

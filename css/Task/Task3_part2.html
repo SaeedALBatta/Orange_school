@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 part 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: linear-gradient(to right, #5606e1, #9508ed);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 850px;
+            background-color: white;
+            border-radius: 25px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+        }
+        .member-login{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .member-login input{
+            padding: 5px;
+            margin: 5px;
+            border: none;
+            border-radius: 15px;
+            background-color: #e8e3e3 ;
+        }
+
+
+        .icon{
+            width: 45%;
+            text-align: center;
+        }
+
+        .icon img{
+            width: 50%;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 50% ;
+            background-color:  #e8e3e3;
+            object-fit:cover;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-box i{
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 14px;
+        }
+        .input-box input{
+            width: 100%;
+            padding: 15px 20px 15px 45px; /* مساحة للأيقونة */
+            border: none;
+            border-radius: 30px;
+            background: #eee;
+            font-size: 14px;
+        }
+        .login-btn{
+            width: 80%;
+            margin: 10px auto;
+            color: white;
+            background-color: rgb(51, 206, 8);
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+        p{
+            font-size: small;
+            text-align: center;
+        }
+        p a {
+            text-decoration: none;
+            color:  rgb(51, 206, 8) ;
+        }
+        .seconde {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">
+            <img src="../../../HTML/Media/img/laptop.png" alt="login illustration">
+        </div>
+        <div class="member-login">
+            <h1>Member Login</h1>
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email" >
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" >
+            </div>
+            <button class="login-btn">LOGIN</button>
+            <p>Forgot <a href="#">Usernsme/</a> <a href="#">Password?</a></p>
+            <p class="seconde"><a href="#">Create New Account </a></p>
+        </div>
+    </div>
+</body>
+</html>

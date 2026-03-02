@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 Part1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: rgba(101, 5, 192, 0.092);
+
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        .card{
+            background-color: rgba(129, 87, 255, 0.879);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 450px;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin: 60px 20px 10px;
+            padding: 20px;
+        }
+        .card h1{
+            text-align: center;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .card input{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .card .behinde input{
+            width: 49% ;
+        }
+        .cheack {
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            margin: 10px;
+        }
+        .signup-btn{
+            margin: 0 auto;
+            width: 350px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px; background-color: gray;
+            color: rgb(75, 75, 75);
+            font-size: larger;
+        }
+        p {
+            color: white;
+            text-align: center;
+            margin: 5px 10px;
+            padding: 5px;
+        }
+        .one {
+            margin-top: -5px;
+        }
+        .zero a {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Sign Up</h1>
+        <div class="behinde">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+        <div class="cheack">
+            <input type="checkbox"> <span>I accept the Tems Of Use & Privcy Policy</span>
+        </div>
+        <button class="signup-btn">Sign Up</button>
+        <p class="zero">Already have an account?<a href="#">Login Here</a></p>
+        <p class="one">Copyright &copy; YourCompany.com</p>
+    </div>
+</body>
+</html>

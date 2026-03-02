@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 Part 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #8fd3b6, #3db39e);
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .card{
+            background-color: white;
+            width: 400px;
+            margin: 40px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            
+        }
+        .card h1{
+            color: #1c7c72;
+            margin-bottom: 40px;
+        }
+        input[type="email"],
+        input[type="password"]{
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .checkbox{
+            text-align: left;
+            margin: -20px 0 25px;
+            font-size: 14px;
+        }
+        .Signin-btn{
+            color: white;
+            background-color: #1c7c72;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .links {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .links a{
+            text-decoration: none;
+            color: #1c7c72;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Login</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <div  class="checkbox">
+                <input  type="checkbox">
+                <label>show password</label>
+            </div>
+            <button class="Signin-btn">SIGN IN</button>
+            <p class="links">Forgot <a href="#">Username</a> / <a href="#">Password?</a></p>
+            <p class="links">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+</body>
+</html>

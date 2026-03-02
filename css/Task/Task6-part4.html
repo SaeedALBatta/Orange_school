@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      gap: 5px;
+      background-color: #fff;
+      padding: 5px;
+    }
+
+    .header {
+      background-color: black;
+      flex: 1;
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      flex: 3;
+    }
+
+    .orange {
+      background-color: orange;
+      flex: 2;
+    }
+
+    .green {
+      background-color: green;
+      flex: 1;
+    }
+
+    .footer {
+      background-color: blue;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+  <div class="middle">
+    <div class="orange"></div>
+    <div class="green"></div>
+  </div>
+  <div class="footer"></div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Sign in</title>
+    <style>
+        body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f2ef;
+    margin: 0;
+    padding: 20px;
+}
+.Logo{
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+    padding: 15px 20px;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px ;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.card p {
+    margin-top: -25px;
+}
+input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.password-field {
+    position: relative;
+}
+.password-field input {
+    padding-right: 60px;
+}
+.show-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: blue;
+    border: none;
+    cursor: pointer;
+}
+.Forgot {
+    text-decoration: none;
+    color: blue;
+
+}
+.signin-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.divider::before, .divider::after {
+    content: '';
+    flex:1;
+    height: 1px;
+    background: #ccc;
+}
+.apple-btn {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.join{
+    text-align: center;
+}
+.join a {
+    text-decoration: none;
+    color: blue;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #f3f2ef;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: gray;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: gray;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://www.linkedin.com/" target="_blank" title="Go To LinkedIn">
+            <img class="Logo" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/xbu/linkedin-revised-brand-guidelines/linkedin-logo/fg/brandg-linkedinlogo-hero-logo-dsk-v01.png/jcr:content/renditions/brandg-linkedinlogo-hero-logo-dsk-v01-2x.png" alt="LinkedIn Logo">
+        </a>
+    </header>
+    <main>
+        <div class="card">
+            <h1>Sign in</h1>
+            <p>Stay Updated on your professional world</p>
+
+            <input type="text" placeholder="Email Or Phone">
+            <div class="password-field">
+                <input type="password" placeholder="Password" >
+                <button class="show-btn">show</button>
+            </div>
+
+            <a href="#" class="Forgot">Forgot password?</a>
+            <button class="signin-btn">Sign in</button>
+            <div class="divider"><span>or</span></div>
+            <button class="apple-btn"> Sign in with Apple</button>
+        </div>
+        
+        <p class="join">New to LinkedIn? <a href="#">Join Now</a></p>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="logo">LinkedIn</span>
+            <span>&copy; 2021</span>
+
+            <a href="#">User Agreement</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Community Guidelines</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Copyright Policy</a>
+            <a href="#">Send Feedback</a>
+            <section>Language ▼</section>
+        </div>
+</footer>
+</body>
+</html>
+

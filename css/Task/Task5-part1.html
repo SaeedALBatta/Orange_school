@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 44, 251);
+        }
+        .artical{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+        .artical p{
+            background-color: rgb(199, 194, 194);
+            width: 250px;
+            padding: 10px;
+            margin: 0;
+        }
+        .scroll {
+            flex: 100% ;
+            max-height: 60px;
+            overflow-y: scroll;
+            border-bottom: 2px solid black ;
+            border-top: 2px solid black ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Floating Articels </h2>
+    <div class="artical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+        <p class="scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor aliquam ducimus sed, reiciendis odit accusamus, suscipit voluptas accusantium quas optio excepturi recusandae illo blanditiis commodi omnis error deleniti aut unde.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas sapiente asperiores itaque delectus qui velit hic! Tenetur accusamus similique, voluptates repudiandae, delectus non, ex obcaecati magni incidunt harum neque!</p>
+    </div>
+</body>
+</html>
