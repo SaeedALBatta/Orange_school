@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form Pages</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(43, 167, 255);
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 3rem;
+            padding: 3rem;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem;
+        }
+        .name-row{
+            display: flex;
+        }
+        .name-row input{
+            flex: 1;
+        }
+        input{
+            padding:10px;
+            border:1px solid #ccc;
+            background-color: whitesmoke;
+            border-radius:4px;
+            flex:1;
+        }
+        .SignUp{
+            margin-top: 0.5rem;
+        }
+        .SignUp-p{
+            color: #a4a3a3;
+            margin-top: -10px;
+        }
+        .cheak{
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        .cheak a{
+            text-decoration: none;
+            color: #2ba7ff;
+        }
+        .Out , a{
+            margin-top: 2rem;
+            color: white;
+        }
+        header{
+            width: 95%;
+        }
+        .Sign-Up{
+            width: 30%;
+            padding: 10px 20px;
+            color: white;
+            background-color: #2ba7ff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        @media (max-width : 576px)
+        {
+            .left,
+            .Right{
+                width: 100%; 
+            }
+            .left{
+                margin-bottom: 1rem;
+            }
+            .cheak , .Sign-Up {
+                margin: 0px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <h1 class="SignUp">Sign Up</h1>
+            <p class="SignUp-p">Please Fill in This Form to create an account!</p>
+            <hr>
+        </header>
+        <form action="" method="">
+            <div class=".name-row">
+                <input class="left" type="text" placeholder="First Name" required>
+                <input class="Right" type="text" placeholder="Last Name" required>
+            </div>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <div class="cheak">
+                <input type="checkbox">
+                <span>I accept the <a href="#">Terms of Use</a> & <a href="#">Privcy Policy</a>.</span>
+            </div>
+            <button class="Sign-Up" >Sign Up</button>
+        </form>
+    </div>
+    <p class="Out">Already Have an account?<a href="#">Login Here</a>.</p>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-items: center;
+            justify-content: space-between;
+            padding: 5px 16px;
+            border: 1px solid #ccc;
+            height: 10vh;
+        }
+        nav span {
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 800;
+
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+
+        }
+        nav ul a{
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            color: #252f3a;
+            padding: 5px;
+            margin: 10px;
+        }
+        nav ul a:hover{
+            color: white;
+            background-color: #252f3a;
+        }
+        .Hero{
+            padding: 2rem;
+            background: url(https://farm9.staticflickr.com/8524/8522369874_9a2d83e90b_h.jpg) ;
+            background-size: cover;
+            height: 40vh;
+        }
+        .Hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .Hero-text h2{
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .Hero-text p {
+            margin-bottom: 2rem;
+        }
+        .Hero-text button{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(35, 35, 222);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .Hero-text button:hover{
+            color: rgb(35, 35, 222);
+            background-color: white;
+            
+        }
+        .Our-Service{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        h3{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .card{
+            flex: 1 1 calc(25% - 1rem);
+            padding: 0.5rem;
+            margin: 1rem;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        }
+        @media (max-width: 992px){
+            .card{
+                flex: 1 1 calc(45% - 1rem);
+            }
+        }
+        @media (max-width: 576px){
+            .card{
+                flex: 1 1 calc(100% - 1rem);
+            }
+            nav{
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+            nav ul{
+                padding: 5px;
+            }
+
+        }
+        .Our-Service i{
+            font-size: 2rem;
+        }
+        .About-Us{
+            display: flex;
+        }
+        .left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding:0.8rem;
+        }
+        .left img{
+            width: 50%;
+            height: 80%;
+        }
+        .Right{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        @media (max-width: 992px){
+            .About-Us{
+                display: flex;
+                flex-direction: column;
+            }
+            .Right{
+                justify-content: center;
+                align-items: center;
+            }
+            .Right p{
+                text-align: center;
+                margin: 10px;
+            }
+        }
+        @media (max-width: 576px){
+            .card{
+                flex: 1 1 calc(100% - 1rem);
+            }
+            .Right p{
+                text-align: center;
+                margin: 10px;
+            }
+            .Hero{
+                height: auto;
+                padding: 3rem 1rem;
+                background-position: center;
+            }
+            .Hero-text{
+                text-align: center;
+            }
+            .Hero-text h2{
+                font-size: 1.8rem;
+            }
+            .Hero-text p{
+                font-size: 0.9rem;
+            }
+            .Hero-text button{
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+        hr{
+            width: calc(100% -2rem);
+        }
+        .Right h2{
+            margin-bottom: 0;
+        }
+        .bold{
+            font-weight: 500;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #252f3a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span>MyWebsite</span>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sevice</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Hero">
+        <div class="Hero-text">
+            <h2>Welcome to Our Website</h2>
+            <p class="bold">Creating responsive and modren web designs.</p>
+            <button class="GetStarted-btn">Get Started</button>
+        </div>
+    </div>
+    <h3>Our-Service</h3>
+    <div class="Our-Service">
+        <div class="card">
+            <i class="fa-solid fa-gear"></i>
+            <p>Service One</p>
+            <p>Description of service one.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear"></i>
+            <p>Service Two</p>
+            <p>Description of service one.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear"></i>
+            <p>Service Three</p>
+            <p>Description of service one.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="About-Us">
+        <div class="left">
+            <img src="https://thumbs.dreamstime.com/b/group-meeting-businesspeople-gathered-boardroom-witnessed-conflict-female-boss-employee-accusing-mistake-443205244.jpg" alt="employee meeting">
+        </div>
+        <div class="Right">
+            <h2>About Us</h2>
+            <p class="bold">Learn more about our company.</p>
+            <p>we are a dedicatd team prviding high qualtiy web solution .our goals is to help your bissness grow and seccsed online.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
