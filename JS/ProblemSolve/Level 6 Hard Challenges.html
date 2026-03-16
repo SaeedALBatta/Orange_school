@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Level 6 — Hard Challenges</title>
+</head>
+<body>
+    
+    <script>
+        // Task 26 — findMissingNumber(arr)
+        function findMissingNumber(arr){
+            const n = arr.length + 1 ;
+            const expectedsum = (n*(n+1)) / 2 ;
+            const realsum = arr.reduce((sum,element) => sum + element , 0);
+            return expectedsum - realsum;
+        }
+        console.log(findMissingNumber([1,2,3,5,6]));
+
+        // Task 27 — pairSum(arr,target)
+        function pairSum(arr,target){
+            for (let i = 0; i < arr.length; i++) {
+                let need = target - arr[i];
+                if (arr.includes(need) && need !== arr[i]){
+                    return [arr[i], need];
+                }
+            }
+            return null; 
+        }
+        console.log(pairSum([2,11,7,15],9));
+
+        // Task 28 — rotateArray(arr,steps)
+        function rotateArray(arr,steps){
+            return arr.slice(-2).concat(arr.slice(0,length -2));
+        }
+        console.log(rotateArray([1,2,3,4,5],2));
+
+        // Task 29 — chunkArray(arr,size)
+        function chunkArray(arr,size){
+            const result = [];
+                for (let i = 0; i < arr.length; i += size) {
+                    result.push(arr.slice(i, i + size));
+                }
+                return result;
+        }
+        console.log(chunkArray([1,2,3,4,5,6],2));
+
+        // Task 30 — groupByLength(arr)
+        function groupByLength(arr) {
+            const result = {};
+            for (let i = 0; i < arr.length; i++) {
+                let len = arr[i].length; 
+                if (!result[len]) {
+                    result[len] = []; 
+                }
+                result[len].push(arr[i]); 
+            }
+            return result;
+        }
+        console.log(groupByLength(["hi","cat","dog","apple"]));
+    </script>
+</body>
+</html>

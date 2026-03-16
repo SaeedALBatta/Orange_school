@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔴 Level 4 — String & Array Combined</title>
+</head>
+<body>
+    
+    <script>
+        // Task 16 — wordsLongerThan(arr,length)
+        function wordsLongerThan(arr,length){
+            return arr.filter((a) => a.length > length);
+        }
+        console.log(wordsLongerThan(["alex","mohammad","ali","sara"] , 4));
+
+        // Task 17 — countLetterInWords(arr,letter)
+        function countLetterInWords(arr,letter){
+            return arr.filter(a => a.includes(letter)).length;
+        }
+        console.log(countLetterInWords(["apple","banana","car","dog"],"a"));
+        
+        // Task 18 — removeShortWords(arr,length)
+        function removeShortWords(arr,length){
+            return arr.filter(a => a.length >= length);
+        }
+        console.log(removeShortWords(["alex","mohammad","ali","sara"] , 4));
+        
+        
+        // Task 19 — findLongestWord(arr)
+        function findLongestWord(arr){
+            return arr.sort((a,b) => b.length - a.length)[0];
+        }
+        console.log(findLongestWord(["alex","mohammad","ali","sara"]));
+
+        // Task 20 — findShortestWord(arr)
+        function findShortestWord(arr){
+            return arr.sort((a,b) => a.length - b.length)[0];
+        }
+        console.log(findShortestWord(["alex","mohammad","ali","sara"]))
+        </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🟣 Level 5 — Complex Challenges</title>
+</head>
+<body>
+    
+    <script>
+        // Task 21 — sortByLength(arr)
+        function sortByLength(arr){
+            return arr.sort((a,b) => a.length - b.length);
+        }
+        console.log(sortByLength(["apple","hi","banana"]));
+
+        // Task 22 — removeEverySecond(arr)
+        function removeEverySecond(arr){
+            return arr.filter((element , index) => index % 2 === 0);
+        }
+        console.log(removeEverySecond([1,2,3,4,5,6]));
+
+        // Task 23 — sumEvenNumbers(arr)
+        function sumEvenNumbers(arr){
+            return arr.filter(a => a % 2 === 0).reduce((sum , a) => sum + a, 0)
+        }
+        console.log(sumEvenNumbers([1,2,3,4,5,6]));
+
+        // Task 24 — sumOddIndex(arr)
+        function sumOddIndex(arr){
+            return arr.filter((element , index) => index % 2 !== 0).reduce((sum , element) => sum + element , 0);
+        }
+        console.log(sumOddIndex([1,2,3,4,5,6]));
+
+        // Task 25 — reverseWithoutReverse(arr)
+        function reverseWithoutReverse(arr){
+            let reversed = [];
+            for (let i = 0 ; i < arr.length ; i++){
+                reversed.unshift(arr[i]);
+            }
+            return reversed;
+        }
+        console.log(reverseWithoutReverse([1,2,3,4,5,6]));
+
+        
+    </script>
+</body>
+</html>

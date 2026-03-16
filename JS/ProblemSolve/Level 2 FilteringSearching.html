@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2 — Filtering & Searching</title>
+</head>
+<body>
+    
+    <script>
+        // Task 6 — removeDuplicates(arr)
+        function removeDuplicates(arr){
+            let newarr = [];
+            for (let i = 0 ; i < arr.length ; i++){
+                if (!newarr.includes(arr[i])){
+                    newarr.push(arr[i]);
+                }
+            }
+            return newarr;
+        }
+        console.log(removeDuplicates([1,2,2,3,4,4,5]));
+
+        // Task 7 — findSecondLargest(arr)
+        // 1 without slice return a string 
+        function findSecondLargest(arr){
+            return arr.sort((a,b) => b - a).slice(1,2);
+        }
+        console.log(findSecondLargest([37,4,9,2,11,10,6]));
+        // 2
+        function findSecondLargest1(arr){
+            return arr.sort((a,b) => a - b).slice(-2,-1);
+        }
+        console.log(findSecondLargest1([37,4,9,2,11,10,6]));
+        
+
+        // Task 8 — findSecondSmallest(arr)
+        function findSecondSmallest(arr){
+            return arr.sort((a,b) => a - b).slice(1,2);
+        }
+        console.log(findSecondSmallest([37,4,9,2,11,10,6]));
+
+        // Task 9 — removeGreaterThan(arr,value)
+        function removeGreaterThan(arr,value){
+            return arr.filter((a) => a < value);
+        }
+        console.log(removeGreaterThan([10,5,20,3,8],10));
+        
+        // Task 10 — removeLessThan(arr,value)
+        function removeLessThan(arr,value){
+            return arr.filter((a) => a >= value);
+        }
+        console.log(removeLessThan([10,5,20,3,8],10));
+
+    </script>
+</body>
+</html>

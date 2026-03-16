@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript — Array & Function Challenges</title>
+</head>
+<body>
+    <h2>Rules</h2>
+    <pre> 
+        - Every solution must be written as a function   - Do NOT use map()
+
+        - Try to combine Array methods + loops           - Do not solve tasks using loop only
+
+        - Use array methods whenever possible            - Test your functions with multiple examples
+    </pre>
+
+    <script>
+        // Task 1 — firstAndLast(arr)
+
+        // 1
+        function firstAndLast(arr){
+            let first = arr[0] ;
+            let last = arr[arr.length-1];
+            return [first,last];
+        }
+        // 2
+        function firstAndLast1(arr){
+            return arr.slice(0,1).concat(arr.slice(-1));
+        }
+
+        // Task 2 — removeMiddle(arr)
+        // 1 Work on Odd Length
+        function removeMiddle(arr){
+            return  arr.slice(0, Math.floor((arr.length) / 2)).concat(arr.slice( Math.ceil((arr.length) / 2)));
+        }
+        document.write(removeMiddle([1,2,3,4,5]));
+
+        // 2 Dynamic
+        function RemoveMiddle(arr) {
+            let mid = Math.floor(arr.length / 2); 
+            if (arr.length % 2 === 0) {
+                return arr.slice(0, mid - 1).concat(arr.slice(mid + 1));
+            } else {
+                return arr.slice(0, mid).concat(arr.slice(mid + 1));
+            }
+        }
+
+        // Task 3 — swapFirstLast(arr)
+        function swapFirstLast(arr){
+            return arr.slice(-1).concat(arr.slice(1,arr.length-1)).concat(arr.slice(0,1));
+        }
+        console.log(swapFirstLast([1,2,3,4,5]));
+
+        // Task 4 — insertAtMiddle(arr,value)
+        function insertAtMiddle(arr,value){
+            return arr.slice(0,Math.round(arr.length / 2)).concat(value).concat(arr.slice(Math.ceil(arr.length / 2)));
+        }
+        console.log(insertAtMiddle([1,2,3,4,8],10));
+
+        // Task 5 — duplicateArray(arr)
+        // 1
+        function duplicateArray(arr){
+            return arr.slice(0).concat(arr.slice(0));
+        }
+        console.log(duplicateArray([1,2,3]));
+        //2
+        function duplicateArray1(arr){
+            return arr.concat(arr)
+        }
+        console.log(duplicateArray([1,2,3]));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔵 Level 3 — Advanced Array Logic</title>
+</head>
+<body>
+    <script>
+        // Task 11 — countOccurrences(arr,value)
+        function countOccurrences(arr,value){
+            return arr.filter((a) => a === value).length;
+        }
+        console.log(countOccurrences([1,2,3,2,4,2],2));
+
+        // Task 12 — arrayIntersection(arr1,arr2)
+        function arrayIntersection(arr1,arr2){
+            return arr1.filter(a => arr2.includes(a));
+        }
+        console.log(arrayIntersection([1,2,3,4], [3,4,5,6]));
+        
+        // Task 13 — arrayDifference(arr1,arr2)
+        function arrayDifference(arr1,arr2){
+            return arr1.filter(a => !(arr2.includes(a)))
+        }
+        console.log(arrayDifference([1,2,3,4], [3,4]));
+
+        // Task 14 — uniqueMerge(arr1,arr2)
+        function uniqueMerge(arr1,arr2){
+            let arr3 = arr1.concat(arr2);
+            let Result = [];
+            for(let i = 0; i < arr3.length; i++){
+                if (!Result.includes(arr3[i])){
+                    Result.push(arr3[i]);
+                }
+            }
+            return Result;
+        
+        }
+        console.log(uniqueMerge([1,2,3], [3,4,5]));
+
+        // Task 15 — removeNegativeNumbers(arr)
+        function removeNegativeNumbers(arr){
+            return arr.filter(a => a > 0);
+        }
+        console.log(removeNegativeNumbers([5,-2,10,-3,7]))
+    </script>
+</body>
+</html>
