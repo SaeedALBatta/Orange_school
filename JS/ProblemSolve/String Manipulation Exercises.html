@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercies</title>
+</head>
+<body>
+    
+    <script>
+        // 1. Concatenation
+        function Concatenation(){
+            let s1 = "Hello";
+            let s2 = "World";
+            let Full = s1.concat(" ",s2);
+            document.write(`${s1} ${s2} <br>`);
+            document.write(s1 + " " + s2 + "<br>");
+            document.write(Full);
+        }
+
+        // 2. String Length
+        function StringLength(){
+            let S1 = "JavaScript";
+            document.write(S1.length);
+        }
+
+        // 3. Access First Character
+        function AccessFirstCharacter(){
+            let S1 = "Programming";
+            document.write(S1.charAt(0).toLocaleLowerCase());
+        }
+        
+        // 4. Extract Part of a String
+        function ExtractPartString(){
+            let S1 = "coding is fun";
+            document.write(S1.slice(0,6));
+        }
+
+        // 5. Replace Characters
+        function ReplaceCharacters (){
+            let S1 = "cat";
+            document.write(S1.replace("a","e"));
+        }
+
+        // 6. Convert to Uppercase
+        function ConvertUppercase (){
+            let S1 = "JavaScript";
+            document.write(S1.toUpperCase());
+        }
+        // 7. Split a String
+        function SplitString (){
+            S1 = "apple,banana,orange" ;
+            console.log(S1.split(",")); // in document write hs is already sprate by ,
+        }
+        // 8. Join Array into String
+        function JoinArrayIntoString (){
+            let Arr = ["hello", "world"];
+            console.log(Arr.join(" "));
+            document.write(Arr.join(" "));
+        }
+        // 9. Remove Extra Spaces
+        function RemoveExtraSpaces (){
+            let S1 = "    hello world    ";
+            document.write(S1 + "<br>");
+            document.write(S1.trim());
+        }
+        // 10. Check if a Word Exists
+        function CheckWordExists(){
+            let S1 = "hello world";
+            document.write(S1.includes("world"));
+        }
+        // 11. Reverse a String
+        function ReverseString(){
+            let S1 = "hello";
+            document.write(S1.split("").reverse().join(""));
+        }
+        // 12. Count Character Occurrences 
+        function CountCharacterOccurrences (){
+            let count = 0;
+            let S1 = "elephant";
+            for (let i = 0 ; i < S1.length ;i++){
+                if (S1[i] === "e"){
+                    count ++;
+                }
+            }
+            document.write(count);
+        }
+        // 13. Palindrome Check
+        function PalindromeCheck (){
+            let S1 = "racecar";
+            let S2 = S1.split("").reverse().join("");
+            if (S1 === S2){
+                document.write("true");
+            }
+        }
+
+        // 14. Capitalize Each Word
+        function CapitalizeEachWord (){
+            let S1 = "hello world";
+            let Capitalized = S1.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1));
+            document.write(Capitalized.join(" "));
+        }
+        CapitalizeEachWord();
+
+        // 15. Format Number
+        function FormatNumber (){
+            let N1 = 1234.5678;
+            document.write(N1.toFixed(2));
+        }
+        
+
+        // 16. Extract Numbers from String
+        function ExtractNumbersString (){
+            let S1 = "There are 3 apples and 2 oranges" ;
+            let num = S1.match(/\d+/g);
+            document.write('[' + num.join(",") + ']');}
+
+        // 17. Email Validation
+        function EmailValidation(){
+            let S1 = "example@email.com" ;
+            document.write(S1.includes("@"));
+        }
+        
+        // 18. Replace Word
+        function ReplaceWord (){
+            let S1 = "This is a bad word" ;
+            document.write(S1.replace("bad" , "good"));
+        }
+        // 19. Remove Duplicate Characters
+        function RemoveDuplicateCharacters (){
+            let S1 = "aabbc";
+            let result = "";
+            for (let i = 0; i < S1.length; i++) {
+                let found = false;
+                for (let j = 0; j < result.length; j++) {
+                    if (S1[i] === result[j]) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    result += S1[i];
+                }
+            }
+            document.write(result);
+        }
+
+        // 20. Sort Characters Alphabetically
+        function SortCharactersAlphabetically (){
+            let S1 = "hello" ;
+            document.write(S1.split('').sort().join(""));
+        }
+        
+        // 21. Check for Anagrams 
+        function CheckAnagrams (){
+            let S1 = "listen" ;
+            let S2 = "silent" ;
+            let str1 = S1.split('').sort().join("");
+            let str2 = S2.split('').sort().join("");
+            if (str1 === str2){
+                document.write(true);
+            } else {
+                document.write(false);
+            }
+        }
+
+        // 22. Reverse Words in Sentence
+        function ReverseWordsSentence (){
+            S1 = "The quick brown fox" ;
+            let str1 = S1.split(" ").reverse().join(" ");
+            document.write(str1);
+        }
+
+        // 23. Find the Longest Word
+        function FindtheLongestWord (){
+            let S1 = "Web development is fascinating";
+            let str1 = S1.split(" ");
+
+            let longest = " ";
+            for (let i = 0 ; i < str1.length ; i++){
+                if (str1[i].length > longest.length){
+                    longest = str1[i];
+                }
+            }
+            document.write(longest + "<br>");
+        }
+
+        // BY USING REDUCE()
+        function FindtheLongestWordbyFunction(){
+            let S1 = "Web development is fascinating";
+
+            // array.reduce((accumulator, currentValue) => {
+            //  logic}, initialValue)
+
+            // ["Web", "development", "is", "fascinating"]
+            // a = "Web"  , b = "development"
+            let longest = S1.split(" ").reduce((a,b) => a.length > b.length ? a : b);
+            document.write(longest);
+        }
+
+        // 24. Advanced Palindrome
+        function AdvancedPalindrome (){
+            let S1 = "A man, a plan, a canal, Panama!";
+            let str1 = S1.toLowerCase().replace(/[^a-z0-9]/g,"");
+            let revresed = str1.split("").reverse().join("");
+            if (str1 === revresed){
+                    document.write(true);
+                } else {
+                    document.write(false);}   
+        }
+
+        // 25. Character Frequency
+        function countCharacters() {
+            let str = "mississippi";
+            let count = {};
+            for (let char of str) {
+                // count[m] = (count[m] || 0 ) + 1
+                // count[m] = (undifinde || 0 ) + 1
+                // count[m] = ( 0 ) + 1 = 1  {m : 1}
+                count[char] = (count[char] || 0) + 1;
+            }
+            console.log(count);
+        }
+
+        // 26. Replace Vowels with Numbers
+        function ReplaceVowelsWithStar (){
+            let S1 = "Hello World";
+            
+            let result = S1.replace(/[aeiou]/gi ,"*");
+            document.write(result);
+        }
+
+        function ReplaceVowelsWithNumber (){
+            let S1 = "Hello World";
+            
+            let result = S1.replace(/[aeiou]/gi ,function(char){
+                let map = {
+                    a:1,
+                    e:2,
+                    i:3,
+                    o:4,
+                    u:5,
+                };
+                return map[char.toLowerCase()];
+            });
+            document.write(result);
+        }
+
+        // 27 — startsWith
+        function startsWith (){
+            let S1 = "JavaScript is fun";
+            document.write(S1.startsWith("Java"));
+        }
+        
+        // 28 — endsWith
+        function endsWith (){
+            let S1 = "image.png";
+            document.write(S1.endsWith("png"));
+        }
+        
+        // 29 — repeat
+        function repeatt (){
+            let S1 = "ha";
+            document.write(S1.repeat(3));
+        }
+        // 30 — indexOf
+        function indexOf (){
+            let S1 = "Hello World";
+            document.write(S1.indexOf("o"));
+        }
+    </script>
+</body>
+</html>

@@ -9,263 +9,302 @@
     
 
     <script>
-        // // Task 1
-        // for (let i = 1 ; i <= 10 ; i++){
-        //     document.write(`${i}`);
-        //     if (i !== 10){
-        //         document.write("-");
-        //     }
-        // }
-        // document.write("<br><br>")
+        // Task 1
+        function Task1(){
+            for (let i = 1 ; i <= 10 ; i++){
+                document.write(`${i}`);
+                if (i !== 10){
+                    document.write("-");
+                }
+            }
+        }
 
-        // // Task 2
-        // let Sum=0;
-        // for (let i = 1 ; i <= 30 ;i++){
-        //     Sum += i;
-        // }
-        // document.write(Sum);
-        // document.write("<br><br>")
+        // Task 2
+        function Task2(){
+            let Sum=0;
+            for (let i = 1 ; i <= 30 ;i++){
+                Sum += i;
+            }
+            document.write(Sum);
+        }
         
-        // // Task 3 
-        // for (let i =0 ;i <=50 ; i++){
-        //     if (i % 2 === 0){
-        //         document.write(`${i} `);
-        //     }
-        // }
-        // document.write("<br><br>")
+        // Task 3 
+        function Task3(){
+            for (let i =0 ;i <=50 ; i++){
+                if (i % 2 === 0){
+                    document.write(`${i} `);
+                }
+            }
+        }
         
-        // // Task 4 
-        // for (let i = 10 ; i >= 1 ; i--){
-        //     document.write(`${i} `);
-        // }
-        // document.write("<br><br>")
+        // Task 4 
+        function Task4(){
+            for (let i = 10 ; i >= 1 ; i--){
+                document.write(`${i} `);
+            }
+        }
+
 
         // Task 5
-
-
+        function Task5 (){
+            for (let i = 1 ; i <= 5 ; i++){
+                let row = "";
+                for (let j = 1 ; j <= 5 ; j++){
+                    row += (j >= 6 - i ? i : 1) + " ";
+                }
+                document.write(row + "<br>");
+            }
+        }
         
 
-        // // Task 6
-
+        // Task 6
+        function Task6() {
+            let n = 5; 
+            for (let i = 1; i <= n; i++) {
+                let row = "";
+                for (let j = 1; j <= n; j++) {
+                    let char = String.fromCharCode(64 + (j >= n + 1 - i ? i : 1)); // 64 + 1 = A
+                    row += char + " ";
+                }
+                document.write(row + "<br>");
+            }
+        }
 
         // Task 7 
+        function Task7 (){
+            for (let i = 1 ; i <= 5 ; i++){
+                let row = "";
+                for (let j = 1 ; j <= 5 ; j++){
+                    row += (j ==  i ? i : 0) + " ";
+                }
+                document.write(row + "<br>");
+            }
+        }
+        Task7();
 
-
         
 
-        // // // Task 8
-        // // let Factoriel = 1;
-        // // let Num = 5;
-        // // for (let i = 1 ; i <= Num ; i++){
-        // //     Factoriel *= i;
-        // // }
-        // // document.write(Factoriel);
+        // Task 8
+        function Task8(){
+            let Factoriel = 1;
+            let Num = 5;
+            for (let i = 1 ; i <= Num ; i++){
+                Factoriel *= i;
+            }
+            document.write(Factoriel);
+        }
 
-        // // Task 9 
-        // for (let counter = 0 ,prev = 0 , current = 1; counter < 10 ; ++counter) {
-        //     document.write(`${prev} `);
-        //     let Newfab = prev + current;
-        //     prev = current;
-        //     current = Newfab;
-        // }
-        // document.write("<br><br>")
+        // Task 9 
+        function Task9(){
+            for (let counter = 0 ,prev = 0 , current = 1; counter < 10 ; ++counter) {
+                document.write(`${prev} `);
+                let Newfab = prev + current;
+                prev = current;
+                current = Newfab;
+            }
+            document.write("<br><br>")
+        }
         
         
-        // // Task 10
-        // let text = "Orange Coding School";
-        // let count = 0;
-        // for (let i = 0 ; i < text.length ; i++){
-        //     if (text[i] === "C" || text[i] === "c"){
-        //         count += 1;
-        //     }
-        // }
-        // document.write(count);
-        // document.write("<br><br>")
+        // Task 10
+        function Task10(){
+            let text = "Orange Coding School";
+            let count = 0;
+            for (let i = 0 ; i < text.length ; i++){
+                if (text[i] === "C" || text[i] === "c"){
+                    count += 1;
+                }
+            }
+            document.write(count);
+            document.write("<br><br>")
+        }
 
-        // // Task 11
-        // for (let i = 1 ; i <= 5 ; i++){
-        //     for (let j = 1 ; j <= 5 ; j++){
-        //         document.write(`${i} * ${j} = ${i * j} <br>`);
-        //     }
-        //     document.write("<br>");
-        // }
+        // Task 11
+        function Task11() {
+            for (let i = 1 ; i <= 5 ; i++){
+                for (let j = 1 ; j <= 5 ; j++){
+                    document.write(`${i} * ${j} = ${i * j} <br>`);
+                }
+                document.write("<br>");
+            }            
+        }
         
-        // // Task 12
-        // // Tsak 13
-        // for (let i = 1 ; i <= 100 ; i ++){
-        //     if (i % 7 === 0){
-        //         document.write(`${i} -`);
-        //     }
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
-        // // Task 14 
-        // let sum = 0;
-        // for (let i = 1 ; i <= 100 ; i ++){
-        //     if (i % 2 !== 0){
-        //         sum += i
-        //     }
-        // }
-        // document.write(sum);
+        // Task 12
+        // Tsak 13
+        for (let i = 1 ; i <= 100 ; i ++){
+            if (i % 7 === 0){
+                document.write(`${i} -`);
+            }
+        }
+        document.write("<br>");
+        document.write("<br>");
+        // Task 14 
+        let sum = 0;
+        for (let i = 1 ; i <= 100 ; i ++){
+            if (i % 2 !== 0){
+                sum += i
+            }
+        }
+        document.write(sum);
         
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // //Task 15 
-        // for (let i = 1 ; i <= 10 ; i ++){
-        //     document.write(i * i + "<br>") ;
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
-        // for (let i = 1 ; i <=10 ; i++){
-        //     document.write(Math.pow(i,2)+ "<br>");
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
+        //Task 15 
+        for (let i = 1 ; i <= 10 ; i ++){
+            document.write(i * i + "<br>") ;
+        }
+        document.write("<br>");
+        document.write("<br>");
+        for (let i = 1 ; i <=10 ; i++){
+            document.write(Math.pow(i,2)+ "<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
 
-        // // Task 16
-        // for(let i = 1 ; i <= 30 ; i ++){
-        //     if(i % 5 === 0 && i % 3 === 0){
-        //         document.write("FizzBuzz <br>");
-        //     }
-        //     else if (i % 3 === 0){
-        //         document.write("Fizz <br>");
-        //     }
-        //     else if (i % 5 === 0){
-        //         document.write("Buzz <br>");
-        //     }
-        //     else{
-        //         document.write(i+ "<br>");
-        //     }
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
+        // Task 16
+        for(let i = 1 ; i <= 30 ; i ++){
+            if(i % 5 === 0 && i % 3 === 0){
+                document.write("FizzBuzz <br>");
+            }
+            else if (i % 3 === 0){
+                document.write("Fizz <br>");
+            }
+            else if (i % 5 === 0){
+                document.write("Buzz <br>");
+            }
+            else{
+                document.write(i+ "<br>");
+            }
+        }
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 17 
-        // for(let i = 1 ; i <= 5 ; i++){
-        //     for (let j = 1 ; j <= i ; j++){
-        //         document.write("*");
-        //     }
-        //     document.write("<br>");
-        // }
+        // Task 17 
+        for(let i = 1 ; i <= 5 ; i++){
+            for (let j = 1 ; j <= i ; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
         
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 18 
-        // for (let i = 1 ; i <= 5 ; i ++){
-        //     for(let j = 5 ; j >= i ; j--){
-        //         document.write("*");
-        //     }
-        //     document.write("<br>");
-        // }
+        // Task 18 
+        for (let i = 1 ; i <= 5 ; i ++){
+            for(let j = 5 ; j >= i ; j--){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
         
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 19
-        // for (let i = 1 ; i <= 5 ; i++){
-        //     for(let j = 1 ; j <= i ; j++){
-        //         document.write(j);
-        //     }
-        //     document.write("<br>");
-        // }
+        // Task 19
+        for (let i = 1 ; i <= 5 ; i++){
+            for(let j = 1 ; j <= i ; j++){
+                document.write(j);
+            }
+            document.write("<br>");
+        }
         
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 20 
-        // for (let i = 1 ; i <= 5 ; i++){
-        //     for(let j = 1 ; j <= i ; j ++){
-        //         document.write(i);
-        //     }
-        //     document.write("<br>");
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
+        // Task 20 
+        for (let i = 1 ; i <= 5 ; i++){
+            for(let j = 1 ; j <= i ; j ++){
+                document.write(i);
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
 
-        // // Task 21
-        // for (let i = 0; i <= 2; i++) {
-        //     for (let j = 0; j <= 9; j++) {
-        //         for (let k = 0; k <= 9; k++) {
-        //             const num = i * 100 + j * 10 + k;
-        //             if (i + j + k === 5 && num <= 200) {
-        //                 document.write(`${i}${j}${k}<br>`);
-        //             }
-        //         }
-        //     }
-        // }
-        // document.write("<br>");
-        // document.write("<br>");
+        // Task 21
+        for (let i = 0; i <= 2; i++) {
+            for (let j = 0; j <= 9; j++) {
+                for (let k = 0; k <= 9; k++) {
+                    const num = i * 100 + j * 10 + k;
+                    if (i + j + k === 5 && num <= 200) {
+                        document.write(`${i}${j}${k}<br>`);
+                    }
+                }
+            }
+        }
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 22
-        // for (let i = 0; i <= 1; i++) {
-        //     for (let j = 0; j <= 9; j++) {
-        //         for (let k = 0; k <= 9; k++) {
-        //             const num = i * 100 + j * 10 + k;
-        //             if (j > k && num <= 100 ) {
-        //                 document.write(`${i}${j}${k}<br>`);
-        //             }
-        //         }
-        //     }
-        // }
+        // Task 22
+        for (let i = 0; i <= 1; i++) {
+            for (let j = 0; j <= 9; j++) {
+                for (let k = 0; k <= 9; k++) {
+                    const num = i * 100 + j * 10 + k;
+                    if (j > k && num <= 100 ) {
+                        document.write(`${i}${j}${k}<br>`);
+                    }
+                }
+            }
+        }
         
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // //Task 23
-        // for (let i = 1; i <= 9; i++){
-        //     for(let j = 1 ; j <= 9;j++){
-        //         if(i === j){
-        //             document.write(`${i}${j}<br>`);
-        //         }
-        //     }
-        // }
+        //Task 23
+        for (let i = 1; i <= 9; i++){
+            for(let j = 1 ; j <= 9;j++){
+                if(i === j){
+                    document.write(`${i}${j}<br>`);
+                }
+            }
+        }
 
-        // document.write("<br>");
-        // document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
         
-        // // Task 24
-        // // for (let i = 0 ; i <= 3 ; i++){
-        //     //     for(let j = 0 ; j <= 9 ; j++){
-        //         //         for (let k = 0 ; k <= 9 ; k++){
-        // //             const numm = Number(`${i}${j}${k}`);
-        // //             const product = i * j * k;
-        // //             if (numm >= 1 && numm <= 300 && product !== 0 && numm % product === 0) {
-        // //                 document.write(numm + "<br>");
-        // //             }
-        // //         }
-        // //     }
-        // // }
-
-        // for (let i = 1 ; i <= 300 ; i++){
-        //     const num1 = i.toString().split("").map(Number);
-        //     let product = 1;
-        //     for (let i = 0; i < num1.length; i++) {
-        //         product *= num1[i];
-        //     }
-        //     if (product !== 0 && i % product === 0) {
-        //         document.write(i+"<br>");
-        //     }
-        // }
-
-
-        // document.write("<br>");
-        // document.write("<br>");
-        
-        // // Task 25 
-        // for(let i = 0 ; i <= 9 ; i ++){
-        //     for (let j = 1; j <= 9 ; j++){
-        //         for (let k = 1 ; k <= 9 ; k++){
-        //             if (i*j*k === i+j+k){
-        //                 document.write(`${i}${j}${k} <br>`);
+        // Task 24
+        // for (let i = 0 ; i <= 3 ; i++){
+            //     for(let j = 0 ; j <= 9 ; j++){
+                //         for (let k = 0 ; k <= 9 ; k++){
+        //             const numm = Number(`${i}${j}${k}`);
+        //             const product = i * j * k;
+        //             if (numm >= 1 && numm <= 300 && product !== 0 && numm % product === 0) {
+        //                 document.write(numm + "<br>");
         //             }
         //         }
         //     }
         // }
 
-        // document.write("<br>");
-        // document.write("<br>");
+        for (let i = 1 ; i <= 300 ; i++){
+            const num1 = i.toString().split("").map(Number);
+            let product = 1;
+            for (let i = 0; i < num1.length; i++) {
+                product *= num1[i];
+            }
+            if (product !== 0 && i % product === 0) {
+                document.write(i+"<br>");
+            }
+        }
+
+
+        document.write("<br>");
+        document.write("<br>");
+        
+        // Task 25 
+        for(let i = 0 ; i <= 9 ; i ++){
+            for (let j = 1; j <= 9 ; j++){
+                for (let k = 1 ; k <= 9 ; k++){
+                    if (i*j*k === i+j+k){
+                        document.write(`${i}${j}${k} <br>`);
+                    }
+                }
+            }
+        }
+
+        document.write("<br>");
+        document.write("<br>");
 
         
         // Task 26
@@ -384,10 +423,9 @@
                 if (last === sumWithoutLast) {
                     document.write(i + "<br>");
                 }
-                
             }
         }
-        Task30();
+        // Task30();
     </script>
 </body>
 </html>
