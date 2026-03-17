@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Task map() & forEach()</title>
+</head>
+<body>
+    
+    <script>
+        // Exercise 1
+        function DoubleEachNumber (arr){
+            return arr.map(a => a * 2);
+        }
+        console.log(DoubleEachNumber([1,2,3]));
+
+        // Exercise 2
+        function  numbersToStrings (arr){
+            return arr.map(a => a.toString());
+        }
+        console.log(numbersToStrings([1,2,3]));
+
+        // Exercise 3
+        function  upperCaseNames (arr){
+            return arr.map(a => a.toUpperCase());
+        }
+        console.log(upperCaseNames(["ali","sara"]));
+
+        // Exercise 4
+        function  addFive (arr){
+            return arr.map(a => a+5);
+        }
+        console.log(addFive([10,20,30]));
+
+        // Exercise 5
+        function  getNames (arr){
+            return arr.map(a => a.name);
+        }
+        console.log(getNames([{name:"Ali",age:20},{name:"Sara",age:25}]));
+
+        // Exercise 6
+        function  wordLengths (arr){
+            return arr.map(a => a.length);
+        }
+        console.log(wordLengths(["apple","dog"]));
+
+        // Exercise 7
+        function  valTimesIndex (arr){
+            return arr.map((a,index) => a * index);
+        }
+        console.log(valTimesIndex([2,3,4]));
+
+        // Exercise 8
+        function  makeUsernames (arr){
+            return arr.map((a) => "@" + a.username);
+        }
+        console.log(makeUsernames([{username:"ahmad"},{username:"sara"}]));
+
+        // Exercise 9
+        function  squareNumbers (arr){
+            return arr.map((a) => a * a);
+        }
+        console.log(squareNumbers([2,3,4]));
+
+        // Exercise 10
+        function  firstLetters (arr){
+            return arr.map((a) => a[0] );
+        }
+        console.log(firstLetters(["Ali","Sara"]));
+
+        // Exercise 11
+        function  sumNumbers (arr){
+            return arr.reduce((a,sum) =>  sum += a , 0 );
+        }
+        console.log(sumNumbers([10,20,30]));
+
+        // Exercise 12
+        function  countEven (arr){
+            return arr.filter(a => a % 2 === 0).length;
+        }
+        console.log(countEven([1,2,3,4]));
+
+        // Exercise 13
+        function  timesTen (arr){
+            return arr.map(a => a*10);
+        }
+        console.log(timesTen([1,2,3,4]));
+
+        // Exercise 14
+        function  addAdult (arr){
+            return arr.map(a => ({
+                ...a,
+                adult: a.age >= 18}));
+        }
+        console.log(addAdult([{name:"Ali",age:20},{name:"Sara",age:15}]));
+
+        // Exercise 15
+        function  addTax (arr){
+            return arr.map(a => a+ a*0.1 );
+        }
+        console.log(addTax([100,200]));
+
+        // Exercise 16
+        function  countBig (arr){
+            return arr.reduce((count ,a) => a > 50 ? count+1 : count,0);
+        }
+        console.log(countBig([20,60,80]));
+
+        // Exercise 16
+        function  countBig1 (arr){
+            return arr.filter(a=> a>50).length;
+        }
+        console.log(countBig1([20,60,80]))
+        
+        // Exercise 17
+        function  labelNumbers (arr){
+            return arr.map(a => "Number: " + a);
+        }
+        console.log(labelNumbers([5,10]))
+        
+        function  labelNumbers1 (arr){
+            return arr.map(a => `Number: ${a}`);
+        }
+        console.log(labelNumbers1([5,10]))
+
+        // Exercise 18
+        function  productNames (arr){
+            return arr.map(a => a.product);
+        }
+        console.log(productNames([{product:"Laptop",price:1000},{product:"Phone",price:500}]));
+
+        // Exercise 19
+        function  addIndex (arr){
+            return arr.map((a,index) => a+index);
+        }
+        console.log(addIndex([5,5,5]))
+
+        // Exercise 20
+        function  isEvenArray (arr){
+            return arr.map(a => a % 2 === 0);
+        }
+        console.log(isEvenArray([1,2,3,4]))
+    </script>
+</body>
+</html>

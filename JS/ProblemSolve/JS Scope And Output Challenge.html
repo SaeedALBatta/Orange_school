@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title># 📌 Topic: `var` vs `let` — Interview Level</title>
+</head>
+<body>
+    <script>
+        /*
+        var:
+            Redeclartion: (yes)
+            Hosting - Accses Before Declare : (Undefind)
+            Reassinging : (Yes)
+            Function Scope 
+            
+            
+            let:
+            Redeclartion: (No => Error)
+            Hosting - Accses Before Declare : (No => Error "Cant Accses Before Initilazion")
+            Reassinging : (Yes)
+            Block Scope
+            
+            
+            const:
+            Redeclartion: (No => Error)
+            Hosting - Accses Before Declare : (No => Error "Cant Accses Before Initilazion")
+            Reassinging : (No)
+            Block Scope
+        */
+
+        // 1️⃣ Hoisting Trap
+        console.log(a)
+        var a=10
+        // Hosting Acsess berfore declaration [undifinde]
+        // declarations are hoisted to the top of their scope
+        // Only the declaration is hoisted, not the assignment.
+
+        // 2️⃣ Temporal Dead Zone (TDZ)
+        // ReferenceError: Cannot access 'a' before initialization
+        // The time between entering the scope and the declaration is called the Temporal Dead Zone (TDZ).
+
+        // 3️⃣ Function vs Block Scope
+        var x = 1;
+        function test() {
+            if (true) {
+                var x = 2;
+            }
+            console.log(x)
+        };
+        test();             // output 2
+        console.log(x)      // output 1
+
+        // 4️⃣ Shadowing + TDZ Trap
+        let x1 = 10;
+        function test1() {
+            console.log(x1)
+            let x1 = 20;
+        }
+        // test1();                 //  ReferenceError
+
+        // 5️⃣ Classic Closure Problem (var)
+        for (var i = 0 ; i < 3; i++) {
+            setTimeout(() =>console.log(i),0);  // Output 3
+        }
+
+        // 6️⃣ Closure with let
+        for (let i = 0; i<3; i++) {
+            setTimeout(() =>console.log(i),0)   // 0 1 2
+        }
+    </script>
+</body>
+</html>
