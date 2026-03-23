@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3️⃣ Task — Maximum Profit</title>
+</head>
+<body>
+    <script>
+        // First Solution
+        let price_1 = [7,1,5,3,6,4];
+        let maximum_profit_1 = 0;
+        let max_sell_1 = price_1[0];
+        let min_buy_1 = price_1[0];
+
+        for(let i = 0 ; i <= price_1.length ; i++){
+            if (price_1[i] < min_buy_1 ){
+                min_buy_1 = price_1[i]
+            }
+            else if (price_1[i] > max_sell_1 ){
+                max_sell_1 = price_1[i]
+            }
+        }
+        maximum_profit_1 = max_sell_1 - min_buy_1 ;
+        console.log(maximum_profit_1);
+        
+        // Seconde Solution
+        let price = [7,1,5,3,6,4];
+        let maximum_profit = 0;
+        let max_sell = 0 ;
+        let min_buy = 0 ;
+
+        for(let i = 0 ; i <= price.length ; i++){
+            for (let j = price.length ; j >= 0 ; j--){
+                if (price[i] >= price[j]){
+                    max_sell = price[i];
+                    min_buy = price[j];
+                }
+                else {
+                    max_sell = price[j];
+                    min_buy = price[i];
+                }
+                let temp = max_sell - min_buy ;
+                if (temp > maximum_profit){
+                    maximum_profit = temp;
+                }
+            }
+        }
+        console.log(maximum_profit);
+        
+        // #3th Solution
+        let price_2 = [7,1,5,3,6,4];
+        let maximum_profit_2 = 0;
+        let min_buy_2 = price_2[0];
+
+        for(let i = 0 ; i < price_2.length ; i++){
+            if (price_2[i] < min_buy_2 ){
+                min_buy_2 = price_2[i]
+            }
+            let temp_2 = price_2[i] - min_buy_2;
+            if (temp_2 > maximum_profit_2){
+                maximum_profit_2 = temp_2;
+            }
+        }
+        
+        console.log(maximum_profit_2);
+
+        // #4th Solution  Using AI 
+        let price_3 = [7,1,5,3,6,4];
+        let maximum_profit_3 = 0;
+        let min_buy_3 = price_3[0];
+
+        for(let i = 0 ; i < price_3.length ; i++){
+            if (price_3[i] < min_buy_3 ){
+                min_buy_3 = price_3[i]
+            }
+            else if (price_3[i] - min_buy_3 > maximum_profit_3) {
+                maximum_profit_3 = price_3[i] - min_buy_3;
+            }
+        }
+        
+        console.log(maximum_profit_3);
+    </script>
+</body>
+</html>

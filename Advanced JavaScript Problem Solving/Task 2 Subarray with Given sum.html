@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2️⃣ Task — Subarray with Given Sum</title>
+</head>
+<body>
+    <script>
+        let arr = [1,4,20,3,10,5];
+        let target = 33;
+        let newarr =[]; 
+        
+        function SubarraySum(arr,target){
+            for (let i = 0 ; i <arr.length ; i++){
+                let sum = 0 ;
+                for (let j = i ; j < arr.length ; j++){
+                    sum += arr[j];
+                    if (sum === target){
+                        return [i,j];
+                    }
+                }
+            }
+            return -1;
+        }
+        console.log(SubarraySum(arr,target));
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Problem Solving</title>
+</head>
+<body>
+    
+    <script>
+        let logs = [
+  { event: "click", time: 1 },
+  { event: "scroll", time: 4 },
+  { event: "click", time: 2 },
+  { event: "click", time: 2 },
+  { event: "click", time: 2 },
+  { event: "scroll", time: 3 },
+  { event: "scroll", time: 3 },
+  { event: "click", time: 5 },
+  { event: "click", time: 5 },
+  { event: "click", time: 5 },
+  { event: "scroll", time: 3 },
+  { event: "scroll", time: 3 },
+  { event: "scroll", time: 4 },
+];
+
+let result = [];
+
+let currentEvent = logs[0].event;
+let count = 1;
+
+for (let i = 1; i < logs.length; i++) {
+
+    if (logs[i].event === currentEvent) {
+        count++;
+    } else {
+        result[result.length] = {
+            event: currentEvent,
+            count: count
+        };
+
+        currentEvent = logs[i].event;
+        count = 1;
+    }
+}
+
+result[result.length] = {
+    event: currentEvent,
+    count: count
+};
+
+console.log(result);
+    </script>
+</body>
+</html>

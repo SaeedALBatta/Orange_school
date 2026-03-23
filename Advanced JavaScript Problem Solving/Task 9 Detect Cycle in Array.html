@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9️⃣ Task — Detect Cycle in Array 💀</title>
+</head>
+<body>
+    <script>
+        function hasCycle(arr) {
+            let visited = [];
+            for (let i = 0; i < arr.length; i++) {
+                visited[i] = false;
+            }
+            let index = 0;
+            while (index >= 0 && index < arr.length) {
+                if (visited[index] === true) {
+                    return true; 
+                }
+                visited[index] = true;
+                index = index + arr[index];
+            }
+            return false; 
+        }
+        console.log(hasCycle([2, -1, 1, 2, 2]));
+    </script>
+</body>
+</html>

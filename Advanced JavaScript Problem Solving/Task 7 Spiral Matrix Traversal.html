@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7️⃣ Task — Spiral Matrix Traversal</title>
+</head>
+<body>
+    <script>
+        // MY SOLVE 
+        // work and same anwser, but not daynimc
+
+        /*
+
+        let arr = [ [1,2,3], [4,5,6], [7,8,9] ] ;
+        let result = [];
+        let k = 0;
+        
+        let Top = 0 ; 
+        let left = 0 ;
+        let right = arr[0].length-1;
+        
+        for (let i = left ; i <= right; i++ ){
+            result[k] = arr[Top][i];
+            k++;
+        }
+        
+        Top ++;
+        right = 0 ;
+        down = arr[1].length-1;
+        for(let i = Top ; i <= down ; i++){
+            result[k] = arr[i][arr.length-1];
+            k++;
+        }
+        
+        Top ++;
+        right = 0 ;
+        left = arr[1].length-1;
+        for (let i = left ; i > right ; i--){
+            result[k] = arr[left][i-1];
+            k++;
+        }
+        
+        let boottem = 0;
+        left = 0 ; 
+        Top = arr.length-2;
+        for (let i = boottem ; i < Top ; i++ ){
+            result[k] = arr[Top][left];
+            k++;
+        }
+        
+        left = 0 ;
+        right = arr[0].length-2;
+        for(let i = left ; i < right ; i++){
+            result[k] = arr[right][right];
+            k++;
+        }
+        
+        
+        console.log(result);
+        */
+
+
+        // using ai to make it daynamic
+        // فاهمه كويس بس ما كتبته بايدي برجعله 
+        let matrix = [ [1,2,3], [4,5,6], [7,8,9], [10,11,12], [13,14,15] ];
+
+        let rows = matrix.length;
+        let cols = matrix[0].length;
+
+        let result = new Array(rows * cols); // بدون push
+        let k = 0;
+
+        let top = 0;
+        let bottom = rows - 1;
+        let left = 0;
+        let right = cols - 1;
+
+        while (top <= bottom && left <= right) {
+
+            // ➡️ يمين
+            for (let i = left; i <= right; i++) {
+            result[k] = matrix[top][i];
+            k++;
+            }
+            top++;
+
+            // ⬇️ تحت
+            for (let i = top; i <= bottom; i++) {
+            result[k] = matrix[i][right];
+            k++;
+            }
+            right--;
+
+            // ⬅️ يسار
+            if (top <= bottom) {
+            for (let i = right; i >= left; i--) {
+                result[k] = matrix[bottom][i];
+                k++;
+            }
+            bottom--;
+            }
+
+            // ⬆️ فوق
+            if (left <= right) {
+            for (let i = bottom; i >= top; i--) {
+                result[k] = matrix[i][left];
+                k++;
+            }
+            left++;
+            }
+        }
+
+
+        console.log(matrix);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5️⃣ Task — Longest Unique Subarray</title>
+</head>
+<body>
+    
+    <script>
+        // Dynamic Sliding Window
+
+        let arr = [1,2,3,1,2,3,4,5];
+        let start = 0 ;
+        let longestStart = 0 ;
+        let longestLength = 0;
+
+        for (let end = 0 ; end < arr.length ; end++){
+            let current = arr[end];
+            for (let i = start ; i < end ; i++){
+                if (arr[i] === current){
+                    start = i +1 ;
+                    break;
+                }
+            }
+            let currentLength = end - start + 1;
+            if (currentLength > longestLength){
+                longestLength = currentLength;
+                longestStart = start;
+            }
+        }
+
+        let result = [];
+        for (let i = longestStart ; i < longestStart + longestLength ; i++){
+            result[result.length] = arr[i];
+        }
+        console.log(result);
+    </script>
+</body>
+</html>
