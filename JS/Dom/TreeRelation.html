@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+  <div id="box">
+    Hello
+  </div>
+  <a id="link" href="https://example.com">Go</a>
+</body>
+    <script>
+        let text = document.getElementById("box").firstChild;
+        console.log(text.parentNode);
+        console.log(text.parentElement);
+
+
+        let link = document.getElementById("link");
+
+        link.getAttribute("href"); // https://example.com
+        console.log(link);
+        link.setAttribute("href", "https://google.com");
+        console.log(link).;
+        link.removeAttribute("href");
+        console.log(link);
+    </script>
+</body>
+</html>
