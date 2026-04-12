@@ -1,0 +1,565 @@
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Basic_C_
+//{
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // TASK 1
+
+//            Console.WriteLine("Please enter your name: ");
+//            string name = Console.ReadLine();
+
+//            Console.WriteLine("Please enter your Age: ");
+//            int age = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine($"My Name Is  {name} and I am {age} years old");
+
+//            // TASK 2
+//            Console.WriteLine("Please Enter To Cheack If Even Or Odd");
+//            int number = Convert.ToInt32(Console.ReadLine());
+//            if (number % 2 == 0)
+//            {
+//                Console.WriteLine("Even");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Odd");
+//            }
+
+//            // Task 3 
+//            Console.WriteLine("please enter any thing");
+//            string copy = Console.ReadLine();
+//            Console.WriteLine(copy);
+
+//            // Task 4
+//            Console.WriteLine("please enter to  checks if a number is positive, negative, or zero");
+//            int result = Convert.ToInt32(Console.ReadLine());
+//            if (result > 0)
+//            {
+//                Console.WriteLine("Postive");
+//            }
+//            else if (result < 0)
+//            {
+//                Console.WriteLine("Negtive");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Zero");
+//            }
+
+//            // Task 5 
+//            Console.WriteLine("please enter the year");
+//            int year = Convert.ToInt32(Console.ReadLine());
+//            if (year % 4 == 0 && year % 100 != 0)
+//            {
+//                Console.WriteLine("Leap Years");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Not Laep yers");
+//            }
+
+//            // Task6
+//            Console.WriteLine("please enter your grade");
+//            int grade = Convert.ToInt32(Console.ReadLine());
+//            if (grade > 50)
+//            {
+//                Console.WriteLine("pass");
+//            }
+//            else
+//            {
+//                Console.WriteLine("fail");
+//            }
+
+//            // Task 7 
+//            Console.WriteLine("plese enter first number");
+//            int num1 = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("plese enter seconde number");
+//            int num2 = Convert.ToInt32(Console.ReadLine());
+
+//            if (num1 > num2)
+//            {
+//                Console.WriteLine(num1);
+//            }
+//            else
+//            {
+//                Console.WriteLine(num2);
+//            }
+
+//            // Task 8 
+//            Console.WriteLine("plese enter number checks if a number is divisible by 5 and 3 ");
+//            int num3 = Convert.ToInt32(Console.ReadLine());
+
+//            if (num3 % 3 == 0 && num3 % 5 == 0)
+//            {
+//                Console.WriteLine("disvalible for 5 & 3");
+//            }
+//            else
+//            {
+//                Console.WriteLine("not ");
+//            }
+
+//            // Task 9 
+//            Console.WriteLine("Please enter a character:");
+//            char letter = char.ToLower(Convert.ToChar(Console.ReadLine()));
+
+//            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+//            {
+//                Console.WriteLine("Vowel");
+//            }
+//            else if (char.IsLetter(letter))
+//            {
+//                Console.WriteLine("Consonant");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Not a letter");
+//            }
+
+//            // Task 10
+//            Console.WriteLine("Plese enter you age");
+//            int age2 = Convert.ToInt32(Console.ReadLine());
+//            if (age2 < 12)
+//            {
+//                Console.WriteLine("Child");
+//            }
+//            else if (age2 <= 18)
+//            {
+//                Console.WriteLine("Tenagers");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Adults");
+//            }
+
+//            // Task 11 
+//            Console.WriteLine("Please enter number of day 1-7");
+//            int day = Convert.ToInt32(Console.ReadLine());
+
+//            switch (day)
+//            {
+//                case 1:
+//                    Console.WriteLine("Sunday");
+//                    break;
+//                case 2:
+//                    Console.WriteLine("Monday");
+//                    break;
+//                case 3:
+//                    Console.WriteLine("Tuesday");
+//                    break;
+//                case 4:
+//                    Console.WriteLine("Wednesday");
+//                    break;
+//                case 5:
+//                    Console.WriteLine("Thursday");
+//                    break;
+//                case 6:
+//                    Console.WriteLine("Friday");
+//                    break;
+//                case 7:
+//                    Console.WriteLine("Saturday");
+//                    break;
+//                default:
+//                    Console.WriteLine("Invalid input! Please enter a number between 1 and 7.");
+//                    break;
+//            }
+
+//            // Task 12
+//            Console.WriteLine("Please enter number of Month 1-12");
+//            int Month = Convert.ToInt32(Console.ReadLine());
+
+//            switch (Month)
+//            {
+//                case 1:
+//                    Console.WriteLine("January");
+//                    break;
+//                case 2:
+//                    Console.WriteLine("February");
+//                    break;
+//                case 3:
+//                    Console.WriteLine("March");
+//                    break;
+//                case 4:
+//                    Console.WriteLine("April");
+//                    break;
+//                case 5:
+//                    Console.WriteLine("May");
+//                    break;
+//                case 6:
+//                    Console.WriteLine("June");
+//                    break;
+//                case 7:
+//                    Console.WriteLine("July");
+//                    break;
+//                case 8:
+//                    Console.WriteLine("August");
+//                    break;
+//                case 9:
+//                    Console.WriteLine("September");
+//                    break;
+//                case 10:
+//                    Console.WriteLine("October");
+//                    break;
+//                case 11:
+//                    Console.WriteLine("November");
+//                    break;
+//                case 12:
+//                    Console.WriteLine("December");
+//                    break;
+//                default:
+//                    Console.WriteLine("Error: Please enter a number between 1 and 12");
+//                    break;
+//            }
+
+//            // Task 13
+//            Console.WriteLine("plese enter num1");
+//            int number1 = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("plese enter num2");
+//            int number2 = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("plese enter OP");
+//            char OP = Convert.ToChar(Console.ReadLine());
+
+//            switch (OP)
+//            {
+//                case '+':
+//                    Console.WriteLine(number1 + number2);
+//                    break;
+//                case '-':
+//                    Console.WriteLine(number1 - number2);
+//                    break;
+//                case '*':
+//                    Console.WriteLine(number1 * number2);
+//                    break;
+//                case '/':
+//                    Console.WriteLine(number1 / number2);
+//                    break;
+//                default:
+//                    Console.WriteLine("operation not exist");
+//                    break;
+//            }
+
+//            // Task 14
+//            Console.WriteLine("Please enter your Grade from 1 To 100");
+//            int grade2 = Convert.ToInt32(Console.ReadLine());
+//            switch (grade2)
+//            {
+//                case >= 90:
+//                    Console.WriteLine('A');
+//                    break;
+//                case >= 80:
+//                    Console.WriteLine('B');
+//                    break;
+//                case >= 70:
+//                    Console.WriteLine('C');
+//                    break;
+//                case >= 60:
+//                    Console.WriteLine('D');
+//                    break;
+//                default:
+//                    Console.WriteLine('F');
+//                    break;
+//            }
+
+//            //Task 15
+//            Console.WriteLine("Please enter a number (1-3):");
+//            int number8 = Convert.ToInt32(Console.ReadLine());
+
+//            switch (number8)
+//            {
+//                case 1:
+//                    Console.WriteLine("You selected One - Good choice!");
+//                    break;
+//                case 2:
+//                    Console.WriteLine("You selected Two - Nice number!");
+//                    break;
+//                case 3:
+//                    Console.WriteLine("You selected Three - Perfect!");
+//                    break;
+//                default:
+//                    Console.WriteLine("Error: Please enter a number between 1 and 3 only!");
+//                    break;
+//            }
+
+//            // Task 16
+//            Console.WriteLine("please enter the number to cheack even or odd");
+//            int cheacknum = Convert.ToInt32(Console.ReadLine());
+//            switch (cheacknum % 2)
+//            {
+//                case 0:
+//                    Console.WriteLine($"{cheacknum} is even");
+//                    break;
+//                case 1:
+//                    Console.WriteLine($"{cheacknum} is odd");
+//                    break;
+//            }
+
+//            // task 17 
+//            Console.WriteLine("Enter your role (Admin, User, or Guest):");
+//            string role = Console.ReadLine();
+//            switch (role.ToLower())
+//            {
+//                case "admin":
+//                    Console.WriteLine("admain");
+//                    break;
+//                case "User":
+//                    Console.WriteLine("User");
+//                    break;
+//                case "Guest":
+//                    Console.WriteLine("Guest");
+//                    break;
+//                default:
+//                    Console.WriteLine("invaild role");
+//                    break;
+//            }
+
+//            // Task 18 
+//            Console.WriteLine("-----     Welcome to Our Restaurant      -----");
+//            Console.WriteLine("Mune Resturant :");
+//            Console.WriteLine("1) Pizza :");
+//            Console.WriteLine("2) Shaorma:");
+//            Console.WriteLine("3) Mansaf:");
+//            Console.WriteLine("4) Flafel:");
+//            Console.WriteLine("Select an Option");
+//            int order = Convert.ToInt32(Console.ReadLine());
+
+//            double price;
+
+//            switch (order) {
+//                case 1:
+//                    price = 3.50;
+//                    Console.WriteLine($"The Pizza Price = {price}");
+//                    break;
+//                case 2:
+//                    price = 2.80;
+//                    Console.WriteLine($"The Shaorma Price = {price}");
+//                    break;
+//                case 3:
+//                    price = 12;
+//                    Console.WriteLine($"The Mansaf Price = {price}");
+//                    break;
+//                case 4:
+//                    price = 1.2;
+//                    Console.WriteLine($"The Flafel Price = {price}";
+//                    break;
+//                default:
+//                    Console.WriteLine("Invalid option! Please select 1-4");
+//                    break;
+//            }
+
+//  If Statements – Advanced  Questions
+// TASK 1
+// TASK 1
+//Console.WriteLine("Please Enter Your Rating In Numbers : [0 - 100]");
+//int Rating = Convert.ToInt32(Console.ReadLine());
+
+//Console.WriteLine("Please Enter Your Salary :");
+//double Salary = Convert.ToDouble(Console.ReadLine());
+
+//Console.WriteLine("\n" + new string('-', 40));
+
+//switch (Rating)
+//{
+//    case >= 90:
+//        Console.WriteLine("Performance Level: Excellent");
+//        Console.WriteLine($"Bonus: 20%");
+//        Console.WriteLine($"Salary After Bonus = {Salary * 1.2}");
+//        break;
+
+//    case >= 75:
+//        Console.WriteLine("Performance Level: Very Good");
+//        Console.WriteLine($"Bonus: 15%");
+//        Console.WriteLine($"Salary After Bonus = {Salary * 1.15}");
+//        break;
+
+//    case >= 60:
+//        Console.WriteLine("Performance Level: Good");
+//        Console.WriteLine($"Bonus: 10%");
+//        Console.WriteLine($"Salary After Bonus = {Salary * 1.10}");
+//        break;
+
+//    default:
+//        Console.WriteLine("Performance Level: Needs Improvement");
+//        Console.WriteLine("No bonus this year");
+//        Console.WriteLine($"Salary Remains: {Salary}");
+//        break;
+//}
+// Task 2 
+//using System.Net;
+
+//Console.WriteLine("Plese enter Yuor GPA :");
+//int GPA = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Are Passed In English Test ? [ true -- false ]");
+//bool isPassed = Convert.ToBoolean(Console.ReadLine());
+//Console.WriteLine("Are Has special recommendation? [ true -- false ]");
+//bool isHasRecommendation = Convert.ToBoolean(Console.ReadLine());
+
+//if ((GPA >= 85 && isPassed) || isHasRecommendation)
+//{
+//    Console.WriteLine("Congrat you Are eligible for university ");
+//}
+//else
+//{
+//    Console.WriteLine("Sory : You Are NOT eligible for university");
+//}
+
+//// Task 3 
+//Console.WriteLine("Calaculate Delevery Cost Based On Wheaight");
+//Console.WriteLine("please enter the weight of order in KG");
+//double weight = Convert.ToDouble(Console.ReadLine());
+
+//if (weight >= 1)
+//{
+//    Console.WriteLine("The Cost Is $5");
+//}else if (weight >= 5) {
+//    Console.WriteLine("The Cost Is $10");
+//}
+//else if (weight >= 10)
+//{
+//    Console.WriteLine("The Cost Is $20");
+//}
+//else if (weight < 10)
+//{
+//    Console.WriteLine("warning Heavy package");
+//    Console.WriteLine("The Cost Is $50");
+//}
+//else
+//{
+//    Console.WriteLine("warning Heavy package");
+//    Console.WriteLine("NOT ACTEBLE");
+//}
+
+// Task 4 
+
+string correctUsername = "admin";
+string correctPassword = "1234";
+int failedAttempts = 0;
+int maxAttempts = 3;
+
+Console.WriteLine("Login System");
+Console.WriteLine($"Maximum attempts: {maxAttempts}");
+
+while (failedAttempts < maxAttempts)
+{
+    Console.WriteLine("Please Enter Your UserName:");
+    string userName = Console.ReadLine();
+
+    Console.WriteLine("Please Enter Your Password:");
+    string password = Console.ReadLine();
+
+    if (userName == correctUsername && password == correctPassword)
+    {
+        Console.WriteLine("Login successful");
+        break;
+    }
+    else
+    {
+        failedAttempts++;
+        Console.WriteLine("❌ Invalid credentials");
+
+        if (failedAttempts == maxAttempts)
+        {
+            Console.WriteLine("ACCOUNT LOCKED!");
+        }
+    }
+}
+
+
+// Switch Statements – Advanced Questions
+// TASK 1
+
+//            Console.WriteLine("-----     Welcome to Our Restaurant      -----");
+//            Console.WriteLine("Mune Resturant :");
+//            Console.WriteLine("1) Pizza :");
+//            Console.WriteLine("2) Shaorma:");
+//            Console.WriteLine("3) Mansaf:");
+//            Console.WriteLine("4) Flafel:");
+//            Console.WriteLine("Select an Option");
+//            int order = Convert.ToInt32(Console.ReadLine());
+
+//            double price;
+
+//            switch (order) {
+//                case 1:
+//                    price = 3.50;
+//                    Console.WriteLine($"The Pizza Price = {price}");
+//                    break;
+//                case 2:
+//                    price = 2.80;
+//                    Console.WriteLine($"The Shaorma Price = {price}");
+//                    break;
+//                case 3:
+//                    price = 12;
+//                    Console.WriteLine($"The Mansaf Price = {price}");
+//                    break;
+//                case 4:
+//                    price = 1.2;
+//                    Console.WriteLine($"The Flafel Price = {price}";
+//                    break;
+//                default:
+//                    Console.WriteLine("Invalid option! Please select 1-4");
+//                    break;
+//            }
+
+
+// TASK 2
+//Console.WriteLine("Please enter your Grade IN CHAR LIKE [A,B,C,D,F]");
+//            char grade2 = char.ToLower(Convert.Tochar(Console.ReadLine()));
+//            switch (grade2)
+//            {
+//                case >= 90:
+//                    Console.WriteLine('A');
+//                    break;
+//                case >= 80:
+//                    Console.WriteLine('B');
+//                    break;
+//                case >= 70:
+//                    Console.WriteLine('C');
+//                    break;
+//                case >= 60:
+//                    Console.WriteLine('D');
+//                    break;
+//                default:
+//                    Console.WriteLine('F');
+//                    break;
+//            }
+
+// TASKS 4
+//            Console.WriteLine("plese enter num1");
+//            int number1 = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("plese enter num2");
+//            int number2 = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("plese enter OP");
+//            int OP = Convert.Toint32(Console.ReadLine());
+
+//            switch (OP)
+//            {
+//                case 1:
+//                    Console.WriteLine(number1 + number2);
+//                    break;
+//                case 2:
+//                    Console.WriteLine(number1 - number2);
+//                    break;
+//                case 3:
+//                    Console.WriteLine(number1 * number2);
+//                    break;
+//                case 4:
+//                    Console.WriteLine(number1 / number2);
+//                    break;
+//                default:
+//                    Console.WriteLine("operation not exist");
+//                    break;
+//            }
+
+
+
+
+//        }   
+//    }
+//}
